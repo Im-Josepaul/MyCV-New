@@ -1,0 +1,123 @@
+{
+    "about": {
+		"about_me": {
+			"title":"Web Developer & Programmer",
+			"para1":"I'm an ordinary guy from India, with some extra-ordinary skills. I'm a passionate tech guy with a flair for creating cool stuff with computers.",
+			"website":"https://im-josepaul.github.io/NewCV/",
+			"city":"Thrissur, Kerala",
+			"Position":"Ambassador, Alephium",
+			"Degree":"Undergraduate",
+			"Specialization":"Computer Science",
+			"College":"Jyothi Engineering College",
+			"para2":"In my journey so far, I've soaked up knowledge like a sponge and expect more in future. Collaborating with team Phazor, I've dived into exciting projects like ShopEase, BPH Detector, and Broken Bone Detector, each adding a vibrant stroke to my learning canvas. Currently steering as the GDSC Lead at my college, I've encountered invaluable lessons and insights. I love to be a mentor and lead people to a treasure that I can't posses.",
+			"projects":"10",
+			"sessions":"50",
+			"hackathon":"15",
+			"skills":{
+				"html":"100",
+				"css": "80",
+				"javascipt": "75",
+				"raspberrypi": "80",
+				"python": "90",
+				"english": "85"
+			}
+		}
+	},
+	"resume":{
+		"summary":{
+			"summary_text": "I've really invested myself in a range of online and offline courses, eager to level up my skills. Along the way, I've gained experience working with both technical and non-technical teams, which has been super enlightening. I also spend my time in college groups like GDSC and IEDC – those connections have been a game-changer for expanding my network.",
+			"point1": "The Complete 2024 Web Development Bootcamp",
+			"point2": "Content Development, Agrobium Technologies",
+			"point3": "Lead, Google Developer Student Clubs"
+		},
+		"education":{
+			"course1":{
+				"course_name": "BTech Computer Science & Engineering",
+				"startyear": "2021",
+				"endyear": "2025",
+				"location": "Jyothi Engineering College, Thrissur",
+				"info": "I have learned foundational engineering principles and morals. Enough information could be obtained to know how a computer actually works internally and externally."
+			},
+			"course2":{
+				"course_name":"The Complete 2024 Web Development Bootcamp",
+				"startyear": "2021",
+				"endyear": "present",
+				"location": "Udemy",
+				"info": "Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 and DApps"
+			},
+			"course3":{
+				"course_name": "Python Programming",
+				"startyear": "2018",
+				"endyear": "present",
+				"location": "Online and other medium",
+				"info": "I started learning the coding journey by learning python from online medias, and later was able to learn it in college, which taught me in how many ways we can use Python."
+			}
+		},
+		"experience":{
+			"experience1":{
+				"role": "Content Development Intern",
+				"year": "2020",
+				"company": "Agrobium Technologies",
+				"info1": "Helped in video editing and animating tasks for making contents",
+				"info2": "Brainstorming ideas for video ads for the organization"
+			}
+		},
+		"achievements":{
+			"achievement1":{
+				"title": "Lead",
+				"from": "2023",
+				"to": "2024",
+				"Location": "Google Developer Student Clubs",
+				"info1": "Created a team of 10 people to conduct several events",
+				"info2": "Conducted an offline Cloud Study Jams introduction secion",
+				"info3": "Unofficially worked with the GDSC WoW 2024 team for conducting events accross kerala"
+			},
+			"achievement2":{
+				"title": "Mentor - Explore into Raspberry Pi",
+				"from": "2023",
+				"Location": "SCT College of Engineering,Thiruvananthapuram",
+				"info1": "Mentored for a full day event explaining about Raspberry Pi",
+				"info2": "Gave hands on experience to the students with real-model to work on"
+			},
+			"achievement3":{
+				"title": "Vaiga Agrihack 2023",
+				"from": "2023",
+				"Location": "College of Agriculture, Vellayani",
+				"info1": "Agriculture related State-Level Hackathon conducted by Kerala Government",
+				"info2": "Developed BPH Live Detector mechanism using AI and live camera feed"
+			}
+		}
+	},
+	"projects":{
+		"project1":{
+			"title": "ShopEase",
+			"info": "A large database of offline shops in which anyone can search for any products based on their current location. ShopEase can easily identify nearby shops which have the products that you are looking for.",
+			"link": "https://shopease-ruddy.vercel.app/"
+		},
+		"project2":{
+			"title":"Raspberry Pi Mentor",
+			"info": "Conducted a full day workshop on Raspberry Pi at SCT College of Engineering, Trivandrum where I explained indepth about fundamental concepts and explained real-time projects.",
+			"link": "https://www.linkedin.com/posts/jose-paul-jenson-1172b1228_experience-engineering-mentorship-activity-7071526585815756800-V6-k"
+		},
+		"project3":{
+			"title":"Lead at GDSC JEC",
+			"info": "I'm the Lead of Google Developer Student Clubs at my college. A group of 10 people are present to conduct several events like Study Jams, Hackathons, Workshops and more.",
+			"link": "https://www.linkedin.com/posts/jose-paul-jenson-1172b1228_exciting-news-meet-the-dream-team-of-activity-7110828303959134208-7yxV"
+		},
+		"project4":{
+			"title":"Personal Webpage",
+			"info": "Webpage designed to give a brief information about myself. It contains the projects that I have done, the education I have completed and my social profiles.",
+			"link": "https://im-josepaul.github.io/NewCV/"
+		},
+		"project5":{
+			"title":"Simon Game",
+			"info": "A small interactive game developed using JavaScript as part of the Web Development Course done on Udemy. The backend is completed using JavaScript as part of learning procedure.",
+			"link": "https://im-josepaul.github.io/Simon_Game/"
+		},
+		"project6":{
+			"title":"BPH Bug Detection",
+			"info": "A software that uses Machine Learning to recognize Brown Plant Hopper(BPH) from the data usingf the live camera input. This software was made as part of AgriHack 2023 conducted by Government of Kerala.",
+			"link": "https://github.com/Im-Josepaul/Phazor_Agrihack"
+		}
+	}
+}
