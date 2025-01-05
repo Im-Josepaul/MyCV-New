@@ -140,55 +140,27 @@
       </div>
 
       <div class="row skills-content">
-
+        <% const skillsArray = Object.entries(about.skills); %>
+        <% const halfwayIndex = Math.ceil(skillsArray.length / 2); %>
         <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">HTML <i class="val"><%= about.skills.html %>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          <%for (let i=skillsArray.length-1; i>halfwayIndex-1; i--) { %>
+            <div class="progress">
+              <span class="skill"><%= skillsArray[i][0] %><i class="val"><%= skillsArray[i][1]%>%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow='<%= skillsArray[i][1] %>' aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">CSS <i class="val"><%= about.skills.css %>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">JavaScript <i class="val"><%= about.skills.javascipt%>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
+         <% } %>
         </div>
-
         <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">Raspberry Pi <i class="val"><%= about.skills.raspberrypi%>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          <%for (let i=halfwayIndex-1; i>-1; i--) { %>
+            <div class="progress">
+              <span class="skill"><%= skillsArray[i][0] %><i class="val"><%= skillsArray[i][1] %>%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow='<%= skillsArray[i][1] %>' aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Python<i class="val"><%= about.skills.python%>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">English Skills <i class="val"><%= about.skills.english%>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
+         <% } %>
         </div>
 
       </div>
@@ -393,38 +365,33 @@
           </div>
 
           <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4><%= resume.education.course1.course_name%></h4>
-            <h5><%= resume.education.course1.startyear%> - <%= resume.education.course1.endyear%></h5>
-            <p><em><%= resume.education.course1.location%></em></p>
-            <p><%= resume.education.course1.info%></p>
-          </div>
-          <div class="resume-item">
-            <h4><%= resume.education.course2.course_name%></h4>
-            <h5><%= resume.education.course2.startyear%> - <%= resume.education.course2.endyear%></h5>
-            <p><em><%= resume.education.course2.location%></em></p>
-            <p><%= resume.education.course2.info%></p>
-          </div>
-          <div class="resume-item">
-            <h4><%= resume.education.course3.course_name%></h4>
-            <h5><%= resume.education.course3.startyear%> - <%= resume.education.course3.endyear%></h5>
-            <p><em><%= resume.education.course3.location%></em></p>
-            <p><%= resume.education.course3.info%></p>
-          </div>
+
+          <% for (const [course,details] of Object.entries(resume.education)){ %>
+            <div class="resume-item">
+              <h4><%= details.course_name%></h4>
+              <h5><%= details.startyear%> - <%= details.endyear || ' '%></h5>
+              <p><em><%= details.location%></em></p>
+              <p><%= details.info%></p>
+            </div>
+          <% } %>  
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4><%= resume.experience.experience1.role%></h4>
-            <h5><%= resume.experience.experience1.year%></h5>
-            <p><em><%= resume.experience.experience1.company%></em></p>
-            <p>
-            <ul>
-              <li><%= resume.experience.experience1.info1%> </li>
-              <li><%= resume.experience.experience1.info2%></li>
-            </ul>
-            </p>
-          </div>
+          <% for(const [key,value] for Object.entries(resume.experience)){ %>
+            <div class="resume-item">
+              <h4><%= value.role%></h4>
+              <h5><%= value.year%></h5>
+              <p><em><%= value.company%></em></p>
+              <p>
+                <ul>
+                  <% for(const [id,data] for Object.entries(value.info)){ %>
+                    <li><%= data %></li>
+                  <% } %>
+                </ul>
+              </p>
+            </div>
+          <% } %>
+          
           <h3 class="resume-title">Achievements &amp; Responsibilities</h3>
           <div class="resume-item">
             <h4><%= resume.achievements.achievement1.title%></h4>
