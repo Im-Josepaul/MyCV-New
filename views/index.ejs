@@ -393,40 +393,24 @@
           <% } %>
           
           <h3 class="resume-title">Achievements &amp; Responsibilities</h3>
-          <div class="resume-item">
-            <h4><%= resume.achievements.achievement1.title%></h4>
-            <h5><%= resume.achievements.achievement1.from%> - <%= resume.achievements.achievement1.to%></h5>
-            <p><em><%= resume.achievements.achievement1.Location%></em></p>
-            <p>
-            <ul>
-              <li><%= resume.achievements.achievement1.info1%> </li>
-              <li><%= resume.achievements.achievement1.info2%> </li>
-              <li><%= resume.achievements.achievement1.info3%></li>
-            </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4><%= resume.achievements.achievement2.title%></h4>
-            <h5><%= resume.achievements.achievement2.from%></h5>
-            <p><em><%= resume.achievements.achievement2.Location%></em></p>
-            <p>
-            <ul>
-              <li><%= resume.achievements.achievement2.info1%></li>
-              <li><%= resume.achievements.achievement2.info2%></li>
-            </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4><%= resume.achievements.achievement3.title%></h4>
-            <h5><%= resume.achievements.achievement3.from%></h5>
-            <p><em><%= resume.achievements.achievement3.Location%></em></p>
-            <p>
-            <ul>
-              <li><%= resume.achievements.achievement3.info1%></li>
-              <li><%= resume.achievements.achievement3.info2%></li>
-            </ul>
-            </p>
-          </div>
+          <% for(const [key,value] of Object.entries(resume.achievements)){ %>
+            <div class="resume-item">
+              <h4><%= value.title%></h4>
+              <h5><%= value.from%> 
+                <% if(value.to) { %>
+                  - <%=value.to%>
+                <% } %>
+              </h5>
+              <p><em><%= value.Location%></em></p>
+              <p>
+                <ul>
+                  <% for(const [id,data] of Object.entries(value.info)){ %>
+                    <li><%= data%> </li>
+                  <% } %>
+                </ul>
+              </p>
+            </div>
+          <% } %>
         </div>
       </div>
 
@@ -444,15 +428,15 @@
       </div>
 
       <div class="row">
-        <a href='<%= projects.project1.link%>' target="_blank">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <a href='<%= projects.project1.link%>' target="_blank"></a>
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-shopify"></i></div>
               <h4><a href='<%= projects.project1.link%>'><%= projects.project1.title%></a></h4>
               <p><%= projects.project1.info%></p>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <a href='<%= projects.project2.link%>' target="_blank">
