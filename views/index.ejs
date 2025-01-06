@@ -377,14 +377,14 @@
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">Professional Experience</h3>
-          <% for(const [key,value] for Object.entries(resume.experience)){ %>
+          <% for(const [key,value] of Object.entries(resume.experience)){ %>
             <div class="resume-item">
               <h4><%= value.role%></h4>
               <h5><%= value.year%></h5>
               <p><em><%= value.company%></em></p>
               <p>
                 <ul>
-                  <% for(const [id,data] for Object.entries(value.info)){ %>
+                  <% for(const [id,data] of Object.entries(value.info)){ %>
                     <li><%= data %></li>
                   <% } %>
                 </ul>
