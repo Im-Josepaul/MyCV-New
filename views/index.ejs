@@ -428,68 +428,34 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <a href='<%= projects.project1.link%>' target="_blank"></a>
+        <% const projectArray = Object.entries(projects); %>
+        <% const halfIndex = Math.ceil(projectArray.length / 2); %>
+        <%for (let i=0; i<halfIndex; i++) { %>
+          <% const [key,value] = projectArray[i]; %>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0">
+            <a href='<%= value.link%>' target="_blank"></a>
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-shopify"></i></div>
+                <h4><a href='<%= value.link%>'><%= value.title%></a></h4>
+                <p><%= value.info%></p>
+              </div>
+            </a>
+          </div>
+        <% } %>
+
+        <%for (let i=halfIndex; i<projectArray.length; i++) { %>
+          <% const [key,value] = projectArray[i]; %>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <a href='<%= value.link%>'>
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-shopify"></i></div>
-              <h4><a href='<%= projects.project1.link%>'><%= projects.project1.title%></a></h4>
-              <p><%= projects.project1.info%></p>
+              <div class="icon"><i class="bx ri-pages-fill"></i></div>
+              <h4><a href='<%= value.link%>'><%= value.title%></a></h4>
+              <p><%= value.info%></p>
             </div>
-          </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <a href='<%= projects.project2.link%>' target="_blank">
-          <div class="icon-box">
-            <div class="icon"><i class="bx ri-presentation-fill"></i></div>
-            <h4><a href='<%= projects.project2.link%>' target="_blank"><%= projects.project2.title%></a></h4>
-            <p><%= projects.project2.info%> </p>
+            </a>
           </div>
-          </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <a href='<%= projects.project3.link%>' target="_blank">
-          <div class="icon-box">
-            <div class="icon"><i class="bx ri-code-s-fill"></i></div>
-            <h4><a href='<%= projects.project3.link%>'><%= projects.project3.title%></a></h4>
-            <p><%= projects.project3.info%></p>
-          </div>
-        </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <a href="#">
-          <div class="icon-box">
-            <div class="icon"><i class="bx ri-pages-fill"></i></div>
-            <h4><a href="#"><%= projects.project4.title%></a></h4>
-            <p><%= projects.project4.info%></p>
-          </div>
-          </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <a href='<%= projects.project5.link%>' target="_blank">
-          <div class="icon-box">
-            <div class="icon"><i class="bx ri-layout-grid-fill"></i></div>
-            <h4><a href='<%= projects.project5.link%>'><%= projects.project5.title%></a></h4>
-            <p><%= projects.project5.info%></p>
-          </div>
-          </a>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <a href='<%= projects.project6.link%>' target="_blank">
-          <div class="icon-box">
-            <div class="icon"><i class="bx ri-bug-fill"></i></div>
-            <h4><a href=<%= projects.project6.link%> ><%= projects.project6.title%> </a></h4>
-            <p><%= projects.project6.info%></p>
-          </div>
-          </a>
-        </div>
-
+        <% } %>
       </div>
-
     </div>
   </section>
   <!-- End Projects Section -->
