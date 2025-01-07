@@ -34,7 +34,7 @@
   <header id="header">
     <div class="container">
 
-      <h1><a href="index.html">Josepaul Jenson</a></h1>
+      <h1><a href="#">Josepaul Jenson</a></h1>
       <p>I'm a <span class="typed" data-typed-items="Developer, Freelancer, Mentor"></span></p>
       <nav id="navbar" class="navbar">
         <ul>
@@ -435,7 +435,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0">
             <a href='<%= value.link%>' target="_blank"></a>
               <div class="icon-box">
-                <div class="icon"><i class="bx bxl-shopify"></i></div>
+                <div class="icon"><i class='bx <%= value.icon %>'></i></div>
                 <h4><a href='<%= value.link%>'><%= value.title%></a></h4>
                 <p><%= value.info%></p>
               </div>
@@ -448,7 +448,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <a href='<%= value.link%>'>
             <div class="icon-box">
-              <div class="icon"><i class="bx ri-pages-fill"></i></div>
+              <div class="icon"><i class='bx <%= value.icon %>'></i></div>
               <h4><a href='<%= value.link%>'><%= value.title%></a></h4>
               <p><%= value.info%></p>
             </div>
