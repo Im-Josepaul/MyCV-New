@@ -5,6 +5,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.static("public"));
 const url = process.env.MONGODB_URL;
+const PORT = process.env.PORT || 3000;
 
 const client = new MongoClient(url);
 
@@ -36,9 +37,9 @@ app.get("/",async (req,res)=> {
     resume: aboutData.resume,
     projects: aboutData.projects,
   });
-  client.close();
 });
 
-app.listen(3000, () => {
-  console.log(`Server running on port 3000. Visit: http://localhost:3000 `);
+app.listen(PORT, () => {
+  console.log(`Server running on port:${PORT}`);
+  // console.log("Visit: http://localhost:3000");
 });
