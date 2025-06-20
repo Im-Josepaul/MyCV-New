@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Josepaul Jenson Personal Website</title>
+  <title>Josepaul Jenson</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -22,7 +22,7 @@
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> 
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     <div class="container">
 
       <h1><a href="#">Josepaul Jenson</a></h1>
-      <p>I'm a <span class="typed" data-typed-items="Developer, Freelancer, Mentor"></span></p>
+      <p>I'm a <span class="typed" data-typed-items="Developer, Ecosystem Strategist, Mentor"></span></p>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Home</a></li>
@@ -183,8 +183,8 @@
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="bi-filetype-py" style="color: #5578ff;"></i>
-            <h3>Python Development</h3>
+            <i class="bi-link-45deg" style="color: #4233ff;"></i>
+            <h3>BlockChain</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
@@ -195,20 +195,20 @@
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
           <div class="icon-box">
+            <i class="bi-filetype-py" style="color: #5578ff;"></i>
+            <h3>Python Development</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
             <i class="bi-person-raised-hand" style="color: #e361ff;"></i>
             <h3>Speaking</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-disc-line" style="color: #b20969;"></i>
-            <h3>Music</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-gamepad-fill" style="color: #ffa76e;"></i>
-            <h3>Gaming</h3>
+            <i class="ri-shake-hands-fill" style="color: #ffa76e;"></i>
+            <h3>Leadership</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
@@ -225,8 +225,8 @@
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="bi-link-45deg" style="color: #4233ff;"></i>
-            <h3>BlockChain</h3>
+            <i class="ri-disc-line" style="color: #b20969;"></i>
+            <h3>Music</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
@@ -433,10 +433,10 @@
         <%for (let i=0; i<halfIndex; i++) { %>
           <% const [key,value] = projectArray[i]; %>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0">
-            <a href='<%= value.link%>' target="_blank"></a>
+            <a href='<%= value.link%>' target="_blank">
               <div class="icon-box">
                 <div class="icon"><i class='bx <%= value.icon %>'></i></div>
-                <h4><a href='<%= value.link%>'><%= value.title%></a></h4>
+                <h4><a href='<%= value.link%>' target="_blank"><%= value.title%></a></h4>
                 <p><%= value.info%></p>
               </div>
             </a>
@@ -446,12 +446,12 @@
         <%for (let i=halfIndex; i<projectArray.length; i++) { %>
           <% const [key,value] = projectArray[i]; %>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <a href='<%= value.link%>'>
-            <div class="icon-box">
-              <div class="icon"><i class='bx <%= value.icon %>'></i></div>
-              <h4><a href='<%= value.link%>'><%= value.title%></a></h4>
-              <p><%= value.info%></p>
-            </div>
+            <a href='<%= value.link%>' target="_blank">
+              <div class="icon-box">
+                <div class="icon"><i class='bx <%= value.icon %>'></i></div>
+                <h4><a href='<%= value.link%>' target="_blank"><%= value.title%></a></h4>
+                <p><%= value.info%></p>
+              </div>
             </a>
           </div>
         <% } %>
@@ -474,8 +474,8 @@
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3><a href="mailto:jose.cse21@jecc.ac.in" target="_blank">Email Me</a></h3>
-            <p><a href="mailto:jose.cse21@jecc.ac.in" target="_blank">jose.cse21@jecc.ac.in</a></p>
+            <h3><a href="mailto:josepauljenson.official@gmail.com" target="_blank">Email Me</a></h3>
+            <p><a href="mailto:josepauljenson.official@gmail.com" target="_blank">josepauljenson.official@gmail.com</a></p>
           </div>
         </div>
 
@@ -492,7 +492,7 @@
           </div>
         </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+      <form role="form" class="php-email-form mt-4">
         <div class="row">
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -512,11 +512,17 @@
           <div class="error-message"></div>
           <div class="sent-message">Your message has been sent. Thank you!</div>
         </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
+        <div class="text-center">
+          <button type="submit" id="submit" class="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="spinner hidden" aria-hidden="true"></span>
+          </button>
+        </div>
       </form>
 
     </div>
   </section><!-- End Contact Section -->
+
 
   <!-- Vendor JS Files -->
   <script src="vendor/purecounter/purecounter_vanilla.js"></script>
@@ -532,5 +538,45 @@
   <script src="js/main.js"></script>
 
 </body>
+
+<script>
+  document.querySelector('.php-email-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submit');
+    const spinner = submitBtn.querySelector('.spinner');
+    const btnText = submitBtn.querySelector('.btn-text');
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      submitBtn.disabled = true;
+      btnText.classList.add('hidden');
+      spinner.classList.remove('hidden');
+
+      const res = await fetch('/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!res.ok) throw new Error('Failed to send');
+
+      document.querySelector('.sent-message').style.display = 'block';
+      document.querySelector('.error-message').style.display = 'none';
+    } catch (err) {
+      document.querySelector('.error-message').textContent = err.message;
+      document.querySelector('.error-message').style.display = 'block';
+      document.querySelector('.sent-message').style.display = 'none';
+    } finally {
+      submitBtn.disabled = false;
+      spinner.classList.add('hidden');
+      btnText.classList.remove('hidden');
+    }
+  });
+</script>
+
 
 </html>
