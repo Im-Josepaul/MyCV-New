@@ -2,7 +2,7 @@
 
 Welcome to my personal website! This repository contains the code for my professional webpage where you can find details about my professional life, skills, projects, and more.
 
-You can visit my website [here](https://im-josepaul.github.io/NewCV/).
+You can visit my website [here](https://my-latest-cv.onrender.com).
 
 ## Overview
 
