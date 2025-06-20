@@ -77,6 +77,5 @@ app.post('/contact', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port:${PORT}`);
-  console.log("Visit: http://localhost:3000");
+  console.log(`Server running successfully`);
 });
